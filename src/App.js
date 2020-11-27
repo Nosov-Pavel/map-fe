@@ -1,36 +1,21 @@
 import React, {useState} from "react";
+import ListItem from "./listItem";
 
-export default function App(){
+function App(){
+    const [List, setList] = useState([]);
 
-    const [counter, setCounter] = useState(10);
-    const [newCounter, setNewCounter] = useState(0);
-    const [more, setMore] = useState(3);
 
-    const newButtonMinus = () => {setNewCounter(newCounter -1)}
-    const newButtonPlus = () => {setNewCounter(newCounter +1)}
-
-    const buttonMorePlus = () => {setMore(more +2)}
-
-    const buttonPlus = () => {
-        setCounter( counter + 1)
-    }
-    const buttonMinus = () => {
-        setCounter( counter - 1)
-    }
+    // http://nazarov-kanban-server.herokuapp.com/card
 
     return(
         <div>
-            <button onClick={buttonMinus}>-</button>
-            {counter}
-            <button onClick={buttonPlus}>+</button>
-            <buttonMorePlus onClick>+2</buttonMorePlus>
-            <br/>
-            <button onClick={newButtonMinus}>-</button>
-            {newCounter}
-            <button onClick={newButtonPlus}>+</button>
+            <button>click</button>
+
         </div>
-    )
+    );
 }
+
+export default App;
 
 
 
