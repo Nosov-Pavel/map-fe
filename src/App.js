@@ -3,13 +3,16 @@ import ListItem from "./listItem";
 
 function App(){
     const [List, setList] = useState([]);
+     const getList = () => {
+
+     }
 
 
     // http://nazarov-kanban-server.herokuapp.com/card
 
     return(
         <div>
-            <button>click</button>
+            <button onClick={getList}>click</button>
 
         </div>
     );
