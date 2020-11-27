@@ -12,7 +12,7 @@ function ListItem(props) {
                 {el.description}
 
                 <button onClick={() =>props.deleteCard(el._id)}>delete</button>
-                <label>Confirm</label>
+                <label style={{color: 'red'}}>Confirm</label>
                 <button>no, please</button>
             </li>
         </div>
