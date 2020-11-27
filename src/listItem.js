@@ -1,12 +1,10 @@
-import React, {useState} from "react";
-import axios from 'axios';
-import ListItem from "./listItem";
+import React from "react";
 
-function ListItem(props){
+function ListItem(props) {
     const {el} = props;
 
 
-    return(
+    return (
         <div>
             <li>
                 {el.name}
@@ -14,8 +12,9 @@ function ListItem(props){
                 {el.description}
 
                 <button onClick={() =>props.deleteCard(el._id)}>delete</button>
-            </li>)}
-
+                <label>Confirm</label>
+                <button>no, please</button>
+            </li>
         </div>
     );
 }
