@@ -36,7 +36,7 @@ function App(){
     return(
         <div>
             <button onClick={createCard}>create</button>
-            <button onClick={getList}>click</button>
+            <button onClick={getList}>get</button>
             <hr/>
             {list.map(el =>
             <li>
