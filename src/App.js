@@ -1,18 +1,32 @@
 import React, {useState} from "react";
+import axios from 'axios';
 import ListItem from "./listItem";
 
 function App(){
     const [List, setList] = useState([]);
      const getList = () => {
+         axios.get('http://nazarov-kanban-server.herokuapp.com/card')
+             .then(res => {
+                 setList(res.data);
+
+             })
+             .catch(error => {
+
+             })
 
      }
 
 
-    // http://nazarov-kanban-server.herokuapp.com/card
-
     return(
         <div>
             <button onClick={getList}>click</button>
+            <hr/>
+            {list.map(el =>
+            <li>
+                {el.name}
+                {' '}
+                {el.description}
+            </li>)}
 
         </div>
     );
