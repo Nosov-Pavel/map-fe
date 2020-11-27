@@ -17,8 +17,8 @@ function App(){
 
 
      }
-     const deleteCard = (id) => {
-         axios.delete(`http://nazarov-kanban-server.herokuapp.com/card/${id}`)
+     const deleteCard = async (id) => {
+         await axios.delete(`http://nazarov-kanban-server.herokuapp.com/card/${id}`)
              .then(res => console.log(res))
              .catch(err => console.log(err))
 
