@@ -14,6 +14,10 @@ function App(){
 
              })
 
+
+     }
+     const deleteCard = () => {
+         axios.delete('http://nazarov-kanban-server.herokuapp.com/card')
      }
 
 
@@ -26,6 +30,8 @@ function App(){
                 {el.name}
                 {' '}
                 {el.description}
+
+                <button onClick={() => deleteCard(el.id)}>delete</button>
             </li>)}
 
         </div>
