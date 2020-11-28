@@ -1,10 +1,11 @@
 import React from "react";
 
-function App(){
+function App() {
 
-    return(
+    return (
         <div>
             6
+            <button>+</button>
 
         </div>
     );
