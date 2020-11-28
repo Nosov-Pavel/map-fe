@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 
 function ListItem(props) {
     const {el} = props;
+    const [isConfirmModeOn, setIsConfirmModeOn] = useState(false)
 
 
     return (
@@ -10,10 +11,12 @@ function ListItem(props) {
                 {el.name}
                 {' '}
                 {el.description}
+                {isConfirmModeOn && <button onClick={() =>props.deleteCard(el._id)}>delete</button>}
 
-                <button onClick={() =>props.deleteCard(el._id)}>delete</button>
-                <label style={{color: 'red'}}>Confirm</label>
-                <button>no, please</button>
+
+                <label style={{color: 'red'}}>Are you sure?:</label>
+                <button>yes</button>
+                <button>no</button>
             </li>
         </div>
     );
