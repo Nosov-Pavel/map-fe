@@ -10,6 +10,9 @@ function App() {
 
     return (
         <div>
+            <button onClick={function () {
+                setNumber(number -1)
+            }}>-</button>
             {number}
             <button onClick={addOne}>+</button>
 
