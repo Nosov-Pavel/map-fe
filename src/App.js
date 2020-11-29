@@ -4,8 +4,7 @@ function App() {
     const [number,setNumber] = useState(6)
 
     function addOne() {
-        number++
-        console.log(number)
+        setNumber(number + 1)
 
     }
 
