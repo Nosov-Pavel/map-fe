@@ -1,11 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 
 function App() {
+    const [number,setNumber] = useState(6)
+
+    function addOne() {
+        number++
+        console.log(number)
+
+    }
 
     return (
         <div>
-            6
-            <button>+</button>
+            {number}
+            <button onClick={addOne}>+</button>
 
         </div>
     );
