@@ -5,7 +5,7 @@ function List(props) {
 
     return (
         <div>
-            {props.newCounters}
+            {props.list[0].title}
 
 
         </div>
