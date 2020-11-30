@@ -7,7 +7,11 @@ function List(props) {
         <ul>
             {props.list.map(el=>{
                 return(
-                    <li>{el.title}</li>
+                    <li>
+                        {el.title}
+                        {' '}
+                        {el.value}
+                    </li>
                 )
             })}
 
