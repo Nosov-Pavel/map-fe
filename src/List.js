@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 
-function List() {
+function List(props) {
 
 
     return (
         <div>
+            {props.newCounters}
 
 
         </div>

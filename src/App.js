@@ -7,11 +7,13 @@ function App() {
         {id: 2, title: 'Counter2', value: 20},
         {id: 3, title: 'Counter3', value: 30},
     ])
+    const [newCounters, setNewCounter] = useState([0, 0, 0]);
 
 
     return (
         <div>
-            <List list={counters}/>
+            <List list={counters}
+            newCounters = {newCounters}/>
 
 
         </div>
