@@ -1,19 +1,18 @@
 import React, {useState} from "react";
+import List from "./List";
 
 function App() {
-    const [number,setNumber] = useState(6)
-    function addOne() {
-        setNumber(number + 1)
-    }
+    const [counters, setCounter] = useState([
+        {id: 1, title: 'Counter1', value: 10},
+        {id: 2, title: 'Counter2', value: 20},
+        {id: 3, title: 'Counter3', value: 30},
+    ])
+
 
     return (
         <div>
-            <button onClick={function () {
-                setNumber(number -1)
-            }}>-</button>
-            {number}
-            <button onClick={addOne}>+</button>
-            <button onClick={() => setNumber(number +10)}>+10</button>
+            <List list={counters}/>
+
 
         </div>
     );
