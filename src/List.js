@@ -11,6 +11,7 @@ function List(props) {
                         {el.title}
                         {' '}
                         {el.value}
+                        <button>+</button>
                     </li>
                 )
             })}

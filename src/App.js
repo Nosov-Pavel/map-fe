@@ -9,9 +9,14 @@ function App() {
     ])
     const [newCounters, setNewCounter] = useState([0, 0, 0]);
 
+    const addCounter = () => {
+
+    }
+
 
     return (
         <div>
+            <button></button>
             <List list={counters}
             newCounters = {newCounters}/>
 
