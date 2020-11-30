@@ -4,11 +4,14 @@ function List(props) {
 
 
     return (
-        <div>
-            {props.list[0].title}
+        <ul>
+            {props.list.map(el=>{
+                return(
+                    <li>{el.title}</li>
+                )
+            })}
 
-
-        </div>
+        </ul>
     );
 }
 
