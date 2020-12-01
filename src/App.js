@@ -10,13 +10,15 @@ function App() {
     const [newCounters, setNewCounter] = useState([0, 0, 0]);
 
     const addCounter = () => {
+        counters.push({id: Math.random(), title: 'new', value: 40})
+        setCounter()
 
     }
 
 
     return (
         <div>
-            <button></button>
+            <button onClick={addCounter}>add</button>
             <List list={counters}
             newCounters = {newCounters}/>
 
