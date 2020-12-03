@@ -10,8 +10,9 @@ function App() {
     const [newCounters, setNewCounter] = useState([0, 0, 0]);
 
     const addCounter = () => {
+        console.log('hello')
         counters.push({id: Math.random(), title: 'new', value: 40})
-        setCounter()
+        console.log(counters)
 
     }
 
