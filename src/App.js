@@ -11,8 +11,10 @@ function App() {
 
     const addCounter = () => {
         console.log('hello')
-        counters.push({id: Math.random(), title: 'new', value: 40})
-        console.log(counters)
+        const newCounters = [...counters];
+        newCounters.push({id: Math.random(), title: 'new', value: 40})
+        console.log(newCounters)
+        setCounter(newCounters)
 
     }
 
